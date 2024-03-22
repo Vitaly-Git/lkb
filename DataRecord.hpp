@@ -15,7 +15,11 @@ class DataRecord{
         void setTitle(std::string drTitle);
         void setContent(std::string drContent);
         friend std::ostream& operator<<(std::ostream& os, const DataRecord& dr){
-            os << "[ [" << dr.title << "] " << "[" << dr.content << "] " << "[" << boost::lexical_cast<std::string>(dr.guid) << "] ]";
+            os << "{" <<
+                    "\"title\":\"" << dr.title << "\"" << ", " << 
+                    "\"content\":\"" << dr.content << "\"" << ", " << 
+                    "\"guid\":\"" << boost::lexical_cast<std::string>(dr.guid) << "\"" <<
+                    "}";
             return os;
         }
     private:
