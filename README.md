@@ -1,1 +1,1 @@
-# lkb
+# local knowledge base
